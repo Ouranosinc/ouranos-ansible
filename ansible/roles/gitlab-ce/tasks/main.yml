@@ -1,0 +1,21 @@
+---
+# tasks file for gitlab-ce
+
+- name: checkout repo
+  git:
+    repo: https://github.com/Ouranosinc/gitlab-ce-deploy.git
+    dest: '{{ gitlab_ce_checkout_dir }}'
+    version: '{{ gitlab_ce_version }}'
+  register: gitlab_checkout
+
+- name: deploy env.local
+  template:
+    src: env.local.j2
+    dest: '{{ gitlab_ce_checkout_dir }}/env.local'
+  register: gitlab_envlocal
+
+- name: start gitlab if config changes
+  shell:
+    cmd: ./docker-compose-wrapper.sh up -d
+    chdir: '{{ gitlab_ce_checkout_dir }}'
+  when: gitlab_checkout.changed or gitlab_envlocal.changed

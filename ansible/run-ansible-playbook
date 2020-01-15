@@ -1,0 +1,19 @@
+#!/bin/sh
+# Wrapper with all the useful ansible options already set.
+# Ex: run-ansible-playbook /path/to/inventory_file [force] [other valid ansible options]
+
+INVENTORY_FILE="$1"; shift
+
+FORCE_OPT="$1"
+
+EXTRA_OPTS="--check"
+if [ x"$FORCE_OPT" = xforce ]; then
+    EXTRA_OPTS=""
+    # need to shift since we pass the rest of the args to ansible
+    shift
+fi
+
+set -x
+
+ANSIBLE_STDOUT_CALLBACK=debug ANSIBLE_MAX_DIFF_SIZE=1044480 time ansible-playbook site.yml \
+    --verbose --diff $EXTRA_OPTS --inventory-file "$INVENTORY_FILE" "$@"

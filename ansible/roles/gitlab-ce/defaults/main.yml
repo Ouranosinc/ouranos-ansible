@@ -1,0 +1,12 @@
+---
+# defaults file for gitlab-ce
+
+gitlab_ce_version: master
+
+gitlab_ce_checkout_basedir: /services
+
+gitlab_ce_checkout_dir: '{{ gitlab_ce_checkout_basedir }}/gitlab-ce-deploy'
+
+gitlab_ce_root_pass: rootpasswd
+
+gitlab_ce_smtp: mail
