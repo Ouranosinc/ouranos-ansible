@@ -49,4 +49,17 @@ Vagrant.configure("2") do |config|
       v.cpus = settings.fetch('cpus', 2)
   end
 
+  #
+  # Run Ansible from the Vagrant Host
+  #
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "ansible/site.yml"
+    ansible.config_file = "ansible/ansible.cfg"
+    ansible.limit = "empty"
+    ansible.groups = {
+      "empty" => [settings['hostname']]
+    }
+    ansible.raw_arguments = ["--verbose", "--diff"]
+  end
+
 end
