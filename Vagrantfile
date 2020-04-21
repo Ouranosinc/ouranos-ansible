@@ -60,6 +60,15 @@ Vagrant.configure("2") do |config|
       "empty" => [settings['hostname']]
     }
     ansible.raw_arguments = ["--verbose", "--diff"]
+    # ansible.raw_arguments = Shellwords.shellsplit(ENV['ANSIBLE_ARGS']) if ENV['ANSIBLE_ARGS']
+    #
+    # # CLI command.
+    # ANSIBLE_ARGS='--extra-vars "some_var=value"' vagrant up
+    #
+    # This allows the playbook to work either way (with or without any
+    # ANSIBLE_ARGS).
+    #
+    # https://gist.github.com/phantomwhale/9657134#gistcomment-2130145
   end
 
 end
