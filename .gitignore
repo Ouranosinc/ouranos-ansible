@@ -2,3 +2,4 @@ ansible/roles/haxorof.docker_ce
 ansible/roles/andrewrothstein.bash
 ansible/roles/andrewrothstein.docker-compose
 ansible/roles/andrewrothstein.git
+ansible/roles/andrewrothstein.alpine-glibc-shim
