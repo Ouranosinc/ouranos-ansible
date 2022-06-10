@@ -3,3 +3,4 @@ ansible/roles/andrewrothstein.bash
 ansible/roles/andrewrothstein.docker-compose
 ansible/roles/andrewrothstein.git
 ansible/roles/andrewrothstein.alpine-glibc-shim
+ansible/roles/sourcejedi.etckeeper

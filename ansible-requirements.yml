@@ -9,3 +9,8 @@
 - name: andrewrothstein.git
   src: https://github.com/andrewrothstein/ansible-git
   version: v3.1.6
+
+- name: sourcejedi.etckeeper
+  src: https://github.com/sourcejedi/ansible-etckeeper
+  # repo have no tags, have to use a commit hash
+  version: 3c884f40a815ae1187bb7edc5666cb137e0ffc0b
