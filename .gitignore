@@ -2,3 +2,7 @@ ansible/roles/haxorof.docker_ce
 ansible/roles/andrewrothstein.bash
 ansible/roles/andrewrothstein.docker-compose
 ansible/roles/andrewrothstein.git
+
+.vagrant/
+ubuntu-bionic-18.04-cloudimg-console.log
+vagrant_variables.yml

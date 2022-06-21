@@ -4,3 +4,9 @@
     - { role: andrewrothstein.docker-compose, tags: ["docker-compose"] }
     - { role: andrewrothstein.git, tags: ["git"] }
     - { role: gitlab-ce, tags: ["gitlab-ce"] }
+
+- hosts: empty
+  roles:
+    - { role: haxorof.docker_ce, tags: ["docker"] }
+    - { role: andrewrothstein.docker-compose, tags: ["docker-compose"] }
+    - { role: andrewrothstein.git, tags: ["git"] }
