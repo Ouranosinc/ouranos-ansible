@@ -4,3 +4,7 @@ ansible/roles/andrewrothstein.docker-compose
 ansible/roles/andrewrothstein.git
 ansible/roles/andrewrothstein.alpine-glibc-shim
 ansible/roles/sourcejedi.etckeeper
+
+.vagrant/
+ubuntu-bionic-18.04-cloudimg-console.log
+vagrant_variables.yml
