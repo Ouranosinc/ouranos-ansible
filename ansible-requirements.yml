@@ -11,6 +11,6 @@
   version: v3.1.6
 
 - name: sourcejedi.etckeeper
-  src: https://github.com/tlvu/ansible-etckeeper
+  src: https://github.com/sourcejedi/ansible-etckeeper
   # repo have no tags, have to use a commit hash
-  version: 29fcca649067891079c51008b60550e4d04a64ad
+  version: 4ff9202ff79ba5701f00f5ee17b62082875547a3
