@@ -7,6 +7,7 @@
 
 - hosts: empty
   roles:
+    - { role: sourcejedi.etckeeper, tags: ["etckeeper"] }
     - { role: haxorof.docker_ce, tags: ["docker"] }
     - { role: andrewrothstein.docker-compose, tags: ["docker-compose"] }
     - { role: andrewrothstein.git, tags: ["git"] }
