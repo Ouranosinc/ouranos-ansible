@@ -19,7 +19,9 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "ubuntu/focal64"
+  #config.vm.box = "ubuntu/focal64"
+  config.vm.box = "rockylinux/8"
+  config.vm.box_version = "<= 4.0.0"  # vbguest broken in rockylinux/8 version 5.0.0
   config.vm.define settings['hostname']
   config.vm.hostname = settings['hostname']
   # thin provisioning, won't take 50G upfront
@@ -56,6 +58,7 @@ Vagrant.configure("2") do |config|
     ansible.playbook = "ansible/site.yml"
     ansible.config_file = "ansible/ansible.cfg"
     ansible.limit = "empty"
+    ansible.become = true  # needed for rockylinux/8 box
     ansible.groups = {
       "empty" => [settings['hostname']]
     }
