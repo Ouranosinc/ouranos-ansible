@@ -18,4 +18,4 @@
     - { role: haxorof.docker_ce, tags: ["docker"] }
     - { role: andrewrothstein.docker-compose, tags: ["docker-compose"] }
     - { role: andrewrothstein.git, tags: ["git"] }
-# install  rsyslog, mailx, sendmail
+# install  rsyslog, mailx, sendmail, postfix
