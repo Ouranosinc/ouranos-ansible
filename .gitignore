@@ -8,3 +8,5 @@ ansible/roles/sourcejedi.etckeeper
 .vagrant/
 ubuntu-bionic-18.04-cloudimg-console.log
 vagrant_variables.yml
+
+ignore_files/
