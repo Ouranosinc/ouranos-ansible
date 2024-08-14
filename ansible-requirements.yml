@@ -2,10 +2,6 @@
   src: https://github.com/haxorof/ansible-role-docker-ce
   version: 5.1.0
 
-- name: andrewrothstein.docker-compose
-  src: https://github.com/andrewrothstein/ansible-docker-compose
-  version: v1.4.17
-
 - name: andrewrothstein.git
   src: https://github.com/andrewrothstein/ansible-git
   version: v3.2.11
