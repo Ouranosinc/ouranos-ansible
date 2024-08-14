@@ -8,3 +8,6 @@ ansible/roles/sourcejedi.etckeeper
 .vagrant/
 ubuntu-bionic-18.04-cloudimg-console.log
 vagrant_variables.yml
+
+# Could be used to save previous downloaded galaxy roles.
+ignore_files/
