@@ -1,6 +1,11 @@
 ---
 # tasks file for gitlab-ce
 
+- name: Install gettext for envsubst used in wrapper script
+  ansible.builtin.package:
+    name: gettext
+    state: present
+
 - name: checkout repo
   git:
     repo: https://github.com/Ouranosinc/gitlab-ce-deploy.git
