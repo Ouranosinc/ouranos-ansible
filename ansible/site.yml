@@ -1,5 +1,6 @@
 - hosts: gitlab
   roles:
+    - { role: sourcejedi.etckeeper, tags: ["etckeeper"] }
     - { role: haxorof.docker_ce, tags: ["docker"] }
     - { role: andrewrothstein.git, tags: ["git"] }
     - { role: gitlab-ce, tags: ["gitlab-ce"] }
