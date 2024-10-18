@@ -1,18 +1,18 @@
 - hosts: gitlab
   roles:
+    - { role: andrewrothstein.git, tags: ["git"] }
     - { role: sourcejedi.etckeeper, tags: ["etckeeper"] }
     - { role: haxorof.docker_ce, tags: ["docker"] }
-    - { role: andrewrothstein.git, tags: ["git"] }
     - { role: gitlab-ce, tags: ["gitlab-ce"] }
 
 - hosts: empty
   roles:
+    - { role: andrewrothstein.git, tags: ["git"] }
     - { role: sourcejedi.etckeeper, tags: ["etckeeper"] }
     - { role: haxorof.docker_ce, tags: ["docker"] }
-    - { role: andrewrothstein.git, tags: ["git"] }
 
 - hosts: pavics
   roles:
+    - { role: andrewrothstein.git, tags: ["git"] }
     - { role: sourcejedi.etckeeper, tags: ["etckeeper"] }
     - { role: haxorof.docker_ce, tags: ["docker"] }
-    - { role: andrewrothstein.git, tags: ["git"] }
