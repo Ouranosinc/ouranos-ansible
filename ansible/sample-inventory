@@ -1,6 +1,6 @@
 [gitlab]
-production-gitlab.fqdn.hostname gitlab_ce_version=master  gitlab_ce_root_pass=prod-rootpass gitlab_ce_smtp=mail.example.com
-staging-gitlab.fqdn.hostname    gitlab_ce_version=develop gitlab_ce_root_pass=stag-rootpass gitlab_ce_smtp=mail.example.com
+production-gitlab.fqdn.hostname gitlab_ce_version=master  gitlab_ce_root_pass=prod-rootpass gitlab_ce_smtp=mail.example.com  ansible_become=yes
+staging-gitlab.fqdn.hostname    gitlab_ce_version=develop gitlab_ce_root_pass=stag-rootpass gitlab_ce_smtp=mail.example.com  ansible_become=yes
 
 [empty]
 some-empty-docker-host
