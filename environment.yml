@@ -1,0 +1,8 @@
+# conda env create -f environment.yml
+name: ouranos-ansible
+channels:
+  - conda-forge
+  - nodefaults  # to avoid installing the default packages that come with conda
+dependencies:
+  - python=3.13
+  - ansible=8.5  # newer do not work with github.com/sourcejedi/ansible-etckeeper, no time to find an alternative
